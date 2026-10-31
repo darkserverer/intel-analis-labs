@@ -10,6 +10,7 @@
 | `lab2/` | Лабораторна №2 — оптимізаційна модель та аналіз чутливості | ноутбук, модель Excel |
 | `lab3/` | Лабораторна №3 — діагностика шкал вимірювання | ноутбук, вихідні дані |
 | `lab4/` | Лабораторна №4 — часовий ряд у Python та Orange | ноутбук, вихідні дані, потік Orange, знімки |
+| `lab5/` | Лабораторна №5 — географічні дані OpenStreetMap, рейтинг і маршрут | ноутбук, результати для ЛР8, карта, знімок даних |
 
 ## Лабораторна №1
 
@@ -50,12 +51,23 @@
 `потік_orange.ows` — потік Orange (Orange3-Timeseries), `orange1.png` … `orange6.png` — знімки
 з Orange, на які посилаються висновки до завдань 11–13.
 
+## Лабораторна №5
+
+`lab5/ЛР5_Савков.ipynb` — місто Чернівці (номер у списку 6): два способи отримання даних, відбір
+пам'яток за тегами `historic` і `tourism`, власний рейтинг і порівняння з рейтингом за площею,
+прив'язка до пішохідної мережі, матриці віддалей, найближчий сусід, 2-opt і Held–Karp на 10 точках,
+2-opt на 30 точках, картограма H3, просторове поєднання, відповіді на сім питань і декларація про ШІ.
+
+`lab5/lr5_результати.json` — результати для лабораторної №8, `lab5/lr5_маршрут.html` — карта з обома
+лініями маршруту, `lab5/osm_чернівці/` — знімок даних GeoParquet, завдяки якому ноутбук не звертається
+до мережі. Дані © OpenStreetMap contributors, ліцензія ODbL.
+
 ## Запуск
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install numpy pandas scipy matplotlib seaborn openpyxl statsmodels jupyter
+pip install numpy pandas scipy matplotlib seaborn openpyxl statsmodels jupyter osmnx geopandas pyarrow folium mapclassify h3
 jupyter lab
 ```
 
